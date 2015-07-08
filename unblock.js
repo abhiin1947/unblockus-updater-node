@@ -9,7 +9,7 @@ var password = "";
 var previous_ip = "";
 var timeout_in_ms = 10000;
 var updated = true;
-var interval_time_in_ms = 1000*60*2 // Sync every 4 minutes
+var interval_time_in_ms = 1000*60*20 // Sync every 20 minutes
 
 var check_and_update_ip = function() {
     rest.get('https://api.ipify.org?format=json',{timeout: 10000}).on('timeout', function(ms){
