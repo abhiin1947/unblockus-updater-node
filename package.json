@@ -1,0 +1,20 @@
+{
+  "name": "Unblock-US",
+  "description": "An app that automatically updates your ip on Unblock-US",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Abhinandan Ramaprasath",
+  "homepage": "",
+  "contributors": [ "Abhinandan Ramaprasath <abhiin1947@gmail.com> (https://github.com/abhiin1947)" ],
+  "bugs": { "url": "" },
+  "scripts": { "start": "node unblock.js" },
+  "dependencies": {
+    "restler": "*"
+  },
+  "keywords": ["unblock", "us", "autoupdate", "api", "ip", "change"],
+  "repository": "",
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  }]
+}
