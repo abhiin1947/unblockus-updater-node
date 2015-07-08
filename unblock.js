@@ -12,14 +12,14 @@ var updated = true;
 var interval_time_in_ms = 1000*60*2 // Sync every 2 minutes
 
 var check_and_update_ip = function() {
-    rest.get('https://api.ipify.org?format=json',{timeout: 10000}).on('timeout', function(ms){
+    rest.get('https://api.ipify.org?format=json',{timeout: timeout_in_ms}).on('timeout', function(ms){
       console.log('IP check did not finish within '+ms+' ms');
     }).on('complete',function(data,response){
         if ((data.ip && data.ip !== previous_ip) || !updated) {
             previous_ip = data.ip;
             updated = false;
             console.log("A change in IP has been detected -> "+data.ip);
-            rest.get('https://api.unblock-us.com/login?'+username+':'+password,{timeout: 10000}).on('timeout', function(ms){
+            rest.get('https://api.unblock-us.com/login?'+username+':'+password,{timeout: timeout_in_ms}).on('timeout', function(ms){
                 console.log('IP update did not finish within '+ms+' ms');
             }).on('complete', function(data) {
                 if (data === "active") {
