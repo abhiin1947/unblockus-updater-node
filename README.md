@@ -4,6 +4,7 @@
 
 ### Steps to start it
 - Clone the repo
+- Edit `username` and `password` variable values
 - Run `npm install` to install necessary modules
 - Install forever globally using `npm install -g forever`
 - To start the app in background run `forever start unblock.js`
